@@ -1,0 +1,69 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://MARINA.png" type="Texture" id=1]
+[ext_resource path="res://SIRENA.png" type="Texture" id=2]
+[ext_resource path="res://pixil-frame-0 (9).png" type="Texture" id=3]
+[ext_resource path="res://pixil-frame-0 (10).png" type="Texture" id=4]
+[ext_resource path="res://Control.gd" type="Script" id=5]
+[ext_resource path="res://pixil-frame-0 (12).png" type="Texture" id=6]
+[ext_resource path="res://pixil-frame-0 (13).png" type="Texture" id=7]
+[ext_resource path="res://03HS_ChiptuneM_Boss,Action,Loop.wav" type="AudioStream" id=8]
+
+[node name="Instrucciones" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 439.512, 295.265 )
+scale = Vector2( 1.98778, 1.8454 )
+texture = ExtResource( 3 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 182.873, 174.864 )
+scale = Vector2( 0.299337, 0.319987 )
+texture = ExtResource( 2 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 852.963, 433.823 )
+scale = Vector2( 0.299337, 0.309913 )
+texture = ExtResource( 1 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 667.42, 557.963 )
+scale = Vector2( 2.28145, 1.97888 )
+texture = ExtResource( 4 )
+
+[node name="Control" type="Control" parent="."]
+margin_left = 810.0
+margin_top = 1017.0
+margin_right = 2522.0
+margin_bottom = 1017.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+anchor_left = 462.0
+anchor_top = 600.0
+anchor_right = 462.0
+anchor_bottom = 600.0
+margin_left = -791243.0
+margin_top = -891.691
+margin_right = -790643.0
+margin_bottom = -491.691
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="comienzo" type="TextureButton" parent="Control/VBoxContainer"]
+margin_right = 600.0
+margin_bottom = 300.0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 7 )
+stretch_mode = 4
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 8 )
+autoplay = true
+[connection signal="pressed" from="Control/VBoxContainer/comienzo" to="Control" method="_on_comienzo_pressed"]

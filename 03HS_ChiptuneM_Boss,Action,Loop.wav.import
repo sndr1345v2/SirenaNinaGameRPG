@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/03HS_ChiptuneM_Boss,Action,Loop.wav-bbd16f5e4f42eea6d6cdcc577493fb0d.sample"
+
+[deps]
+
+source_file="res://03HS_ChiptuneM_Boss,Action,Loop.wav"
+dest_files=[ "res://.import/03HS_ChiptuneM_Boss,Action,Loop.wav-bbd16f5e4f42eea6d6cdcc577493fb0d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
