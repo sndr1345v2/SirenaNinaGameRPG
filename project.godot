@@ -8,16 +8,31 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "Marina",
+"language": "GDScript",
+"path": "res://escenas/KinematicBody2D3.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Sirena",
+"language": "GDScript",
+"path": "res://escenas/KinematicBody2D.gd"
+} ]
 _global_script_class_icons={
-
+"Marina": "",
+"Sirena": ""
 }
 
 [application]
 
 config/name="prueba1"
-run/main_scene="res://escenas/tiless.tscn"
+run/main_scene="res://escenas/inicio.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Datosglobales="*res://Datosglobales.gd"
 
 [display]
 

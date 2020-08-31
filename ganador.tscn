@@ -10,7 +10,7 @@
 
 [node name="ganador" type="Node2D"]
 
-[node name="Control" type="Control" parent="."]
+[node name="Ganador" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 1 )
@@ -18,26 +18,40 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Ganador"]
 margin_right = 1021.0
 margin_bottom = 507.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="Ganador/VBoxContainer"]
 margin_right = 1021.0
 margin_bottom = 300.0
 texture = ExtResource( 2 )
 stretch_mode = 6
 
-[node name="volver a jugar" type="TextureButton" parent="Control/VBoxContainer"]
+[node name="volver a jugar" type="TextureButton" parent="Ganador/VBoxContainer"]
 margin_top = 304.0
 margin_right = 1021.0
 margin_bottom = 604.0
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 4 )
 texture_hover = ExtResource( 4 )
+
+[node name="textpuntaje" type="RichTextLabel" parent="Ganador"]
+anchor_top = -0.103
+anchor_bottom = 0.044
+margin_left = 60.0
+margin_top = 152.12
+margin_right = 165.0
+margin_bottom = 161.24
+rect_scale = Vector2( 5, 5 )
+tab_size = 5
+fit_content_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 5 )
@@ -52,4 +66,4 @@ texture = ExtResource( 7 )
 position = Vector2( -576.113, 4.64545 )
 texture = ExtResource( 6 )
 flip_h = true
-[connection signal="pressed" from="Control/VBoxContainer/volver a jugar" to="Control" method="_on_volver_a_jugar_pressed"]
+[connection signal="pressed" from="Ganador/VBoxContainer/volver a jugar" to="Ganador" method="_on_volver_a_jugar_pressed"]
