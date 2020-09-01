@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://CONCHA.png" type="Texture" id=1]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 11.7097
+
+[node name="concha" type="Area2D"]
+position = Vector2( -50.9692, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 223.53, 175.023 )
+scale = Vector2( 0.0409411, 0.0459037 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 223.862, 175.336 )
+shape = SubResource( 1 )

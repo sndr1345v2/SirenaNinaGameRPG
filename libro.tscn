@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://escenas/libro.gd" type="Script" id=1]
+[ext_resource path="res://LIBRO.png" type="Texture" id=2]
+
+[sub_resource type="CapsuleShape2D" id=60]
+radius = 13.5671
+height = 0.0
+
+[node name="libro" type="Area2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 816.341, 143.023 )
+shape = SubResource( 60 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 816.647, 143.808 )
+scale = Vector2( 0.0476761, 0.0496643 )
+texture = ExtResource( 2 )
+[connection signal="body_entered" from="." to="." method="_on_libro_body_entered"]
