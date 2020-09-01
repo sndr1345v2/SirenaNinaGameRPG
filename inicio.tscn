@@ -1,0 +1,88 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://fondis.png" type="Texture" id=1]
+[ext_resource path="res://escenas/Control.gd" type="Script" id=2]
+[ext_resource path="res://logo_2.png" type="Texture" id=3]
+[ext_resource path="res://pixil-frame-0 (6).png" type="Texture" id=4]
+[ext_resource path="res://pixil-frame-0 (7).png" type="Texture" id=5]
+[ext_resource path="res://kenvector_future.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://04HS_ArcadeP_SelectScreen,Action,Loop.wav" type="AudioStream" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 6 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control"]
+show_behind_parent = true
+margin_left = -5.97961
+margin_top = -21.9594
+margin_right = 1408.02
+margin_bottom = 901.041
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+margin_left = 172.0
+margin_top = 66.0
+margin_right = 1080.0
+margin_bottom = 765.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer"]
+margin_right = 908.0
+margin_bottom = 395.0
+texture = ExtResource( 3 )
+stretch_mode = 3
+
+[node name="Start" type="TextureButton" parent="Control/VBoxContainer"]
+margin_top = 399.0
+margin_right = 908.0
+margin_bottom = 699.0
+rect_min_size = Vector2( 300, 300 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 5 )
+expand = true
+stretch_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/Start"]
+anchor_left = 0.376
+anchor_top = 0.366
+anchor_right = 0.5
+anchor_bottom = 0.467
+margin_left = 35.531
+margin_top = 25.7051
+margin_right = 6.93903
+margin_bottom = 24.4051
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.0431373, 0.0196078, 0.0196078, 1 )
+text = "PLAY"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
+volume_db = 15.096
+pitch_scale = 0.9
+autoplay = true
+[connection signal="pressed" from="Control/VBoxContainer/Start" to="Control" method="_on_Start_pressed"]
